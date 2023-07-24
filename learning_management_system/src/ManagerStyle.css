@@ -1,0 +1,212 @@
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+    ----------------------------------------------------- */
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+.custom-link {
+  text-decoration: none;
+  color: inherit;
+}
+.sidebar-heading {
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+#sidebar {
+  /*min-width: 250px;
+      max-width: 250px;*/
+  position:fixed;
+  left: 0rem;
+  width: 300px;
+  height: 100%;
+  background: #7386d5;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+#sidebar.active {
+  margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+  padding: 20px;
+  background: #20b2aa;
+}
+
+#sidebar ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+
+#sidebar ul li a {
+  padding: 10px;
+  font-size: 1.1em;
+  display: block;
+}
+
+#sidebar ul li a:hover {
+  color: #7386d5;
+  background: #fff;
+}
+
+#sidebar ul li.active > a,
+a[aria-expanded="true"] {
+  color: #fff;
+  background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+  position: relative;
+}
+
+.dropdown-toggle::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: #7386d5;
+}
+
+a.article,
+a.article:hover {
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+    ----------------------------------------------------- */
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+    ----------------------------------------------------- */
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  #sidebarCollapse span {
+    display: none;
+  }
+}
+
+/* TABLE CSS */
+
+/* PROFILE */
+
+.profile {
+  position: relative;
+  left: 7rem;
+}
+
+.card {
+  position: relative;
+  width: 25rem;
+  left: 20rem;
+  top: 9rem;
+}
+
+.details {
+  position: relative;
+  left: 30rem;
+  bottom: 20rem;
+}
+
+/* EMPLOYEE CARD */
+
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  margin-left: 20px;
+}
+.news-card {
+  background-color: #66d9d3; 
+  /* background-color:#c32148; */
+ /* background-color: #aeeae7; */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 300px;
+  margin: 10px;
+}
+
+.news-card:hover {
+  transform: scale(1.1);
+}
+.news-image1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*max-width: 100%;
+  max-height: 200px; */
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.news-image2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 200px;
+}
+.news-content {
+  padding: 10px;
+}
+.news-title {
+  font-size: 20px;
+}
+.news-description {
+  font-size: 14px;
+  color: black;
+  align-items: center;
+  text-align: center;
+}
